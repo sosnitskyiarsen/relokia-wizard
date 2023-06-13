@@ -1,0 +1,26 @@
+# Wordpress - ignore core, configuration, examples, uploads and logs.
+# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+
+# Core
+
+
+wp-content/cache
+/license.txt
+/readme.html
+
+# Configuration
+wp-config.php
+
+# Example themes
+/wp-content/themes/node_modules/
+/wp-content/themes/twentytwentyone/
+/wp-content/themes/twentytwentytwo/
+/wp-content/themes/twentynineteen/
+
+# Uploads
+/wp-content/uploads/
+
+# Log files
+*.log
+*.gz
+*.zip
