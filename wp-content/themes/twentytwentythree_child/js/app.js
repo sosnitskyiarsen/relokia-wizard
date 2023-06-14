@@ -62,12 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function endWizard () {
         const userName = $('input[name="email"]').val(),
         userEmail = $('input[name="email"]').val(),
-            userPhone = $('input[name="phone"]').val();
+            userPhone = $('input[name="phone"]').val(),
+            userQuantity = $('input[name="quantity"]').val();
 
         $.ajax({
             url: adminUrl,
             type: 'POST',
-            data: `action=wizard&user-name=${userName}&user-email=${userEmail}&user-phone=${userPhone}`,
+            data: `action=wizard&user-name=${userName}&user-email=${userEmail}&user-phone=${userPhone}&quantity=${userQuantity}`,
             success: function( data ) {
                 console.log(data);
                if (data?.status) {

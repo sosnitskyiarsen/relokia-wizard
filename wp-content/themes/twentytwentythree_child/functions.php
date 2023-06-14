@@ -37,7 +37,7 @@ function wizard_ajax(){
     $message = '';
     foreach ($_POST as $key => $value) {
         if ( $value != "" && $key != "subject"  ) {
-            $message .= "<b>{$key}</b>  <i>$value</i>\n ";
+            $message .= "<b>{$key}</b>  <i>$value</i> <br> ";
         }
     }
 
@@ -46,7 +46,8 @@ function wizard_ajax(){
         'status'=> $mail_status,
         'name'=>$_POST[ 'user-name' ],
         'email'=>$_POST[ 'user-email' ],
-        'phone'=>$_POST[ 'user-phone' ]
+        'phone'=>$_POST[ 'user-phone' ],
+        'quantity'=>$_POST['quantity']
     ]);
     die;
 }
