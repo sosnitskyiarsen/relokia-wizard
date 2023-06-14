@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function endWizard () {
-        const userName = $('input[name="email"]').val(),
+        const userName = $('input[name="name"]').val(),
         userEmail = $('input[name="email"]').val(),
             userPhone = $('input[name="phone"]').val(),
             userQuantity = $('input[name="quantity"]').val();
