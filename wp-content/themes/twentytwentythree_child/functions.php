@@ -28,7 +28,10 @@ add_shortcode( 'r_test', 'r_test_callback' );
 
 add_action( 'wp_ajax_wizard', 'wizard_ajax' );
 add_action( 'wp_ajax_nopriv_wizard', 'wizard_ajax' );
-
+function set_mail_content_type(){
+    return "text/html";
+}
+add_filter( 'wp_mail_content_type','set_mail_content_type' );
 function wizard_ajax(){
     header('Content-Type: application/json; charset=utf-8');
     $message = '';
